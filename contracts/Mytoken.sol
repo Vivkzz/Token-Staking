@@ -28,10 +28,4 @@ contract MyToken is ERC20, Ownable {
     function burn(uint256 amount) external {
         _burn(msg.sender, amount);
     }
-
-    uint256 public constant FAUCET_AMOUNT = 1_000 * 10 ** 18; // 1,000 tokens
-
-    function faucet() external {
-        _mint(msg.sender, FAUCET_AMOUNT);
-    }
 }
